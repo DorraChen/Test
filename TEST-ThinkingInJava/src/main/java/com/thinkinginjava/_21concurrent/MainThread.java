@@ -8,6 +8,7 @@ public class MainThread {
     public static void main(String args[]) {
         LiftOff liftOff = new LiftOff();
         liftOff.run();
+        System.out.println("Waiting for LiftOff!");
         // 运行结果:
         /*
         #taskCount(1)#id(0)#countDown(9),
@@ -20,6 +21,7 @@ public class MainThread {
         #taskCount(1)#id(0)#countDown(2),
         #taskCount(1)#id(0)#countDown(1),
         #taskCount(1)#id(0)#countDown(LiftOff),
+        Waiting for LiftOff!
          */
     }
 
