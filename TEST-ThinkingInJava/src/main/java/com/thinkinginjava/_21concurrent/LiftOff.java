@@ -19,18 +19,26 @@ public class LiftOff implements Runnable {
      */
     private final int id = taskCount++;
 
+    public LiftOff() {
+    }
+
+    public LiftOff(int countDown) {
+        this.countDown = countDown;
+    }
+
     /**
      * 打印的内容
      * @return
      */
     public String status() {
-        return "#" + id + "(" + (countDown > 0 ? countDown : "LiftOff") + "), ";
+        return "#taskCount("+ taskCount +")#id(" + id + ")#countDown(" + (countDown > 0 ? countDown : "LiftOff") + "), ";
     }
 
     @Override
     public void run() {
         while (countDown-- > 0){
-            System.out.print(status());
+            System.out.println(status());
+            // 线程让步,详见知识梳理第一点
             Thread.yield();
         }
     }
