@@ -1,17 +1,16 @@
-package com.thinkinginjava._21concurrent;
+package com.thinkinginjava._21concurrent._1basicthreadmechanism;
 
 /**
  * @author clz
- * @date 2018/11/23 11:06
+ * @date 2018/11/23 10:26
  */
-public class BasicThreads {
+public class MainThread {
     public static void main(String args[]) {
-        Thread thread = new Thread(new LiftOff());
-        thread.start();
+        LiftOff liftOff = new LiftOff();
+        liftOff.run();
         System.out.println("Waiting for LiftOff!");
         // 运行结果:
         /*
-        Waiting for LiftOff!
         #taskCount(1)#id(0)#countDown(9),
         #taskCount(1)#id(0)#countDown(8),
         #taskCount(1)#id(0)#countDown(7),
@@ -22,6 +21,7 @@ public class BasicThreads {
         #taskCount(1)#id(0)#countDown(2),
         #taskCount(1)#id(0)#countDown(1),
         #taskCount(1)#id(0)#countDown(LiftOff),
+        Waiting for LiftOff!
          */
     }
 

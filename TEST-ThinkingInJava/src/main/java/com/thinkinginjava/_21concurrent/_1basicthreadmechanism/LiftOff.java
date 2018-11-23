@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent;
+package com.thinkinginjava._21concurrent._1basicthreadmechanism;
 
 /**
  * @author clz
