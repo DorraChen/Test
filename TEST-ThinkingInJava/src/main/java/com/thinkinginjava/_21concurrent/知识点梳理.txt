@@ -14,3 +14,4 @@
     多次start一个线程会怎么样？-----会抛出异常java.lang.IllegalThreadStateException( 线程状态非法异常 )
 
     start和run的区别:
+    调用start方法方可启动线程，而run方法只是thread的一个普通方法调用，还是在主线程里执行。
