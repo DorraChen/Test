@@ -18,6 +18,7 @@ public class ScheduleThreadPool {
         exec.shutdown();
     }
     // 运行结果不唯一
+// 核心线程数为3
 /*
 Time: 1543214987100, Thread ID: 11=====#taskCount(5)#id(0)#countDown(9)
 Time: 1543214987100, Thread ID: 12=====#taskCount(5)#id(1)#countDown(9)
@@ -69,6 +70,60 @@ Time: 1543214987112, Thread ID: 12=====#taskCount(5)#id(4)#countDown(2)
 Time: 1543214987112, Thread ID: 11=====#taskCount(5)#id(3)#countDown(LiftOff)
 Time: 1543214987112, Thread ID: 12=====#taskCount(5)#id(4)#countDown(1)
 Time: 1543214987112, Thread ID: 12=====#taskCount(5)#id(4)#countDown(LiftOff)
-*/
+ */
+
+// 当核心线程数改成5
+/*
+Time: 1543215198220, Thread ID: 11=====#taskCount(5)#id(0)#countDown(9)
+Time: 1543215198221, Thread ID: 12=====#taskCount(5)#id(1)#countDown(9)
+Time: 1543215198221, Thread ID: 11=====#taskCount(5)#id(0)#countDown(8)
+Time: 1543215198221, Thread ID: 13=====#taskCount(5)#id(2)#countDown(9)
+Time: 1543215198221, Thread ID: 14=====#taskCount(5)#id(3)#countDown(9)
+Time: 1543215198221, Thread ID: 12=====#taskCount(5)#id(1)#countDown(8)
+Time: 1543215198221, Thread ID: 11=====#taskCount(5)#id(0)#countDown(7)
+Time: 1543215198221, Thread ID: 15=====#taskCount(5)#id(4)#countDown(9)
+Time: 1543215198221, Thread ID: 13=====#taskCount(5)#id(2)#countDown(8)
+Time: 1543215198221, Thread ID: 14=====#taskCount(5)#id(3)#countDown(8)
+Time: 1543215198221, Thread ID: 12=====#taskCount(5)#id(1)#countDown(7)
+Time: 1543215198222, Thread ID: 11=====#taskCount(5)#id(0)#countDown(6)
+Time: 1543215198222, Thread ID: 15=====#taskCount(5)#id(4)#countDown(8)
+Time: 1543215198222, Thread ID: 13=====#taskCount(5)#id(2)#countDown(7)
+Time: 1543215198222, Thread ID: 14=====#taskCount(5)#id(3)#countDown(7)
+Time: 1543215198222, Thread ID: 12=====#taskCount(5)#id(1)#countDown(6)
+Time: 1543215198222, Thread ID: 11=====#taskCount(5)#id(0)#countDown(5)
+Time: 1543215198222, Thread ID: 15=====#taskCount(5)#id(4)#countDown(7)
+Time: 1543215198222, Thread ID: 13=====#taskCount(5)#id(2)#countDown(6)
+Time: 1543215198222, Thread ID: 14=====#taskCount(5)#id(3)#countDown(6)
+Time: 1543215198222, Thread ID: 12=====#taskCount(5)#id(1)#countDown(5)
+Time: 1543215198222, Thread ID: 11=====#taskCount(5)#id(0)#countDown(4)
+Time: 1543215198222, Thread ID: 15=====#taskCount(5)#id(4)#countDown(6)
+Time: 1543215198222, Thread ID: 13=====#taskCount(5)#id(2)#countDown(5)
+Time: 1543215198223, Thread ID: 14=====#taskCount(5)#id(3)#countDown(5)
+Time: 1543215198223, Thread ID: 12=====#taskCount(5)#id(1)#countDown(4)
+Time: 1543215198224, Thread ID: 11=====#taskCount(5)#id(0)#countDown(3)
+Time: 1543215198224, Thread ID: 15=====#taskCount(5)#id(4)#countDown(5)
+Time: 1543215198224, Thread ID: 13=====#taskCount(5)#id(2)#countDown(4)
+Time: 1543215198224, Thread ID: 14=====#taskCount(5)#id(3)#countDown(4)
+Time: 1543215198224, Thread ID: 12=====#taskCount(5)#id(1)#countDown(3)
+Time: 1543215198225, Thread ID: 11=====#taskCount(5)#id(0)#countDown(2)
+Time: 1543215198225, Thread ID: 15=====#taskCount(5)#id(4)#countDown(4)
+Time: 1543215198225, Thread ID: 13=====#taskCount(5)#id(2)#countDown(3)
+Time: 1543215198225, Thread ID: 14=====#taskCount(5)#id(3)#countDown(3)
+Time: 1543215198225, Thread ID: 12=====#taskCount(5)#id(1)#countDown(2)
+Time: 1543215198225, Thread ID: 11=====#taskCount(5)#id(0)#countDown(1)
+Time: 1543215198225, Thread ID: 15=====#taskCount(5)#id(4)#countDown(3)
+Time: 1543215198225, Thread ID: 13=====#taskCount(5)#id(2)#countDown(2)
+Time: 1543215198225, Thread ID: 14=====#taskCount(5)#id(3)#countDown(2)
+Time: 1543215198225, Thread ID: 11=====#taskCount(5)#id(0)#countDown(LiftOff)
+Time: 1543215198225, Thread ID: 15=====#taskCount(5)#id(4)#countDown(2)
+Time: 1543215198225, Thread ID: 12=====#taskCount(5)#id(1)#countDown(1)
+Time: 1543215198225, Thread ID: 13=====#taskCount(5)#id(2)#countDown(1)
+Time: 1543215198225, Thread ID: 14=====#taskCount(5)#id(3)#countDown(1)
+Time: 1543215198226, Thread ID: 12=====#taskCount(5)#id(1)#countDown(LiftOff)
+Time: 1543215198226, Thread ID: 15=====#taskCount(5)#id(4)#countDown(1)
+Time: 1543215198226, Thread ID: 13=====#taskCount(5)#id(2)#countDown(LiftOff)
+Time: 1543215198226, Thread ID: 14=====#taskCount(5)#id(3)#countDown(LiftOff)
+Time: 1543215198226, Thread ID: 15=====#taskCount(5)#id(4)#countDown(LiftOff)
+ */
 
 }

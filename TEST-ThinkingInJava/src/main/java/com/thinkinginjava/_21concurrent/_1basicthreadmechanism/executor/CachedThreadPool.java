@@ -22,57 +22,57 @@ public class CachedThreadPool {
             当前线程将继续运行在shutdown()被调用之前提交的所有任务.在所有任务完成之后尽快退出. */
     }
     // 运行结果不唯一
-    /*
-        #taskCount(5)#id(0)#countDown(9),
-        #taskCount(5)#id(1)#countDown(9),
-        #taskCount(5)#id(2)#countDown(9),
-        #taskCount(5)#id(0)#countDown(8),
-        #taskCount(5)#id(2)#countDown(8),
-        #taskCount(5)#id(1)#countDown(8),
-        #taskCount(5)#id(3)#countDown(9),
-        #taskCount(5)#id(4)#countDown(9),
-        #taskCount(5)#id(0)#countDown(7),
-        #taskCount(5)#id(2)#countDown(7),
-        #taskCount(5)#id(1)#countDown(7),
-        #taskCount(5)#id(3)#countDown(8),
-        #taskCount(5)#id(4)#countDown(8),
-        #taskCount(5)#id(0)#countDown(6),
-        #taskCount(5)#id(2)#countDown(6),
-        #taskCount(5)#id(1)#countDown(6),
-        #taskCount(5)#id(3)#countDown(7),
-        #taskCount(5)#id(4)#countDown(7),
-        #taskCount(5)#id(2)#countDown(5),
-        #taskCount(5)#id(1)#countDown(5),
-        #taskCount(5)#id(3)#countDown(6),
-        #taskCount(5)#id(0)#countDown(5),
-        #taskCount(5)#id(4)#countDown(6),
-        #taskCount(5)#id(1)#countDown(4),
-        #taskCount(5)#id(0)#countDown(4),
-        #taskCount(5)#id(3)#countDown(5),
-        #taskCount(5)#id(2)#countDown(4),
-        #taskCount(5)#id(4)#countDown(5),
-        #taskCount(5)#id(3)#countDown(4),
-        #taskCount(5)#id(0)#countDown(3),
-        #taskCount(5)#id(1)#countDown(3),
-        #taskCount(5)#id(0)#countDown(2),
-        #taskCount(5)#id(4)#countDown(4),
-        #taskCount(5)#id(3)#countDown(3),
-        #taskCount(5)#id(2)#countDown(3),
-        #taskCount(5)#id(1)#countDown(2),
-        #taskCount(5)#id(0)#countDown(1),
-        #taskCount(5)#id(4)#countDown(3),
-        #taskCount(5)#id(2)#countDown(2),
-        #taskCount(5)#id(0)#countDown(LiftOff),
-        #taskCount(5)#id(1)#countDown(1),
-        #taskCount(5)#id(3)#countDown(2),
-        #taskCount(5)#id(1)#countDown(LiftOff),
-        #taskCount(5)#id(2)#countDown(1),
-        #taskCount(5)#id(4)#countDown(2),
-        #taskCount(5)#id(3)#countDown(1),
-        #taskCount(5)#id(2)#countDown(LiftOff),
-        #taskCount(5)#id(4)#countDown(1),
-        #taskCount(5)#id(3)#countDown(LiftOff),
-        #taskCount(5)#id(4)#countDown(LiftOff),
-     */
+/*
+Time: 1543215151727, Thread ID: 11=====#taskCount(5)#id(0)#countDown(9)
+Time: 1543215151727, Thread ID: 12=====#taskCount(5)#id(1)#countDown(9)
+Time: 1543215151728, Thread ID: 13=====#taskCount(5)#id(2)#countDown(9)
+Time: 1543215151728, Thread ID: 11=====#taskCount(5)#id(0)#countDown(8)
+Time: 1543215151728, Thread ID: 14=====#taskCount(5)#id(3)#countDown(9)
+Time: 1543215151728, Thread ID: 12=====#taskCount(5)#id(1)#countDown(8)
+Time: 1543215151728, Thread ID: 13=====#taskCount(5)#id(2)#countDown(8)
+Time: 1543215151728, Thread ID: 15=====#taskCount(5)#id(4)#countDown(9)
+Time: 1543215151728, Thread ID: 14=====#taskCount(5)#id(3)#countDown(8)
+Time: 1543215151728, Thread ID: 11=====#taskCount(5)#id(0)#countDown(7)
+Time: 1543215151728, Thread ID: 12=====#taskCount(5)#id(1)#countDown(7)
+Time: 1543215151729, Thread ID: 13=====#taskCount(5)#id(2)#countDown(7)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(8)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(7)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(6)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(7)
+Time: 1543215151729, Thread ID: 12=====#taskCount(5)#id(1)#countDown(6)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(6)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(5)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(6)
+Time: 1543215151729, Thread ID: 13=====#taskCount(5)#id(2)#countDown(6)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(5)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(4)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(5)
+Time: 1543215151729, Thread ID: 12=====#taskCount(5)#id(1)#countDown(5)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(4)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(3)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(4)
+Time: 1543215151729, Thread ID: 13=====#taskCount(5)#id(2)#countDown(5)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(3)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(2)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(3)
+Time: 1543215151729, Thread ID: 12=====#taskCount(5)#id(1)#countDown(4)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(2)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(1)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(2)
+Time: 1543215151729, Thread ID: 13=====#taskCount(5)#id(2)#countDown(4)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(1)
+Time: 1543215151729, Thread ID: 11=====#taskCount(5)#id(0)#countDown(LiftOff)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(1)
+Time: 1543215151729, Thread ID: 12=====#taskCount(5)#id(1)#countDown(3)
+Time: 1543215151729, Thread ID: 15=====#taskCount(5)#id(4)#countDown(LiftOff)
+Time: 1543215151729, Thread ID: 14=====#taskCount(5)#id(3)#countDown(LiftOff)
+Time: 1543215151729, Thread ID: 13=====#taskCount(5)#id(2)#countDown(3)
+Time: 1543215151729, Thread ID: 12=====#taskCount(5)#id(1)#countDown(2)
+Time: 1543215151730, Thread ID: 13=====#taskCount(5)#id(2)#countDown(2)
+Time: 1543215151730, Thread ID: 12=====#taskCount(5)#id(1)#countDown(1)
+Time: 1543215151730, Thread ID: 13=====#taskCount(5)#id(2)#countDown(1)
+Time: 1543215151730, Thread ID: 12=====#taskCount(5)#id(1)#countDown(LiftOff)
+Time: 1543215151730, Thread ID: 13=====#taskCount(5)#id(2)#countDown(LiftOff)
+*/
 
 }
