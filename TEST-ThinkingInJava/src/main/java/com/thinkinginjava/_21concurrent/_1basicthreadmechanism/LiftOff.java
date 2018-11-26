@@ -31,7 +31,7 @@ public class LiftOff implements Runnable {
      * @return
      */
     public String status() {
-        return System.currentTimeMillis() + "=====#taskCount("+ taskCount +")#id(" + id + ")#countDown(" + (countDown > 0 ? countDown : "LiftOff") + "), ";
+        return "Time: " + System.currentTimeMillis() + ", Thread ID: " + Thread.currentThread().getId() + "=====#taskCount("+ taskCount +")#id(" + id + ")#countDown(" + (countDown > 0 ? countDown : "LiftOff") + ") ";
     }
 
     @Override
