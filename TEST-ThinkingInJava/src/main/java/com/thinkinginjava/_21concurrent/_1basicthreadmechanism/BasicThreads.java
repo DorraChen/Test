@@ -8,20 +8,20 @@ public class BasicThreads {
     public static void main(String args[]) {
         Thread thread = new Thread(new LiftOff());
         thread.start();
-        System.out.println("Waiting for LiftOff!");
+        System.out.println(System.currentTimeMillis() + "=====Waiting for LiftOff!");
         // 运行结果:
         /*
-            Waiting for LiftOff!
-            #taskCount(1)#id(0)#countDown(9),
-            #taskCount(1)#id(0)#countDown(8),
-            #taskCount(1)#id(0)#countDown(7),
-            #taskCount(1)#id(0)#countDown(6),
-            #taskCount(1)#id(0)#countDown(5),
-            #taskCount(1)#id(0)#countDown(4),
-            #taskCount(1)#id(0)#countDown(3),
-            #taskCount(1)#id(0)#countDown(2),
-            #taskCount(1)#id(0)#countDown(1),
-            #taskCount(1)#id(0)#countDown(LiftOff),
+            1543214428135=====Waiting for LiftOff!
+            1543214428136=====#taskCount(1)#id(0)#countDown(9),
+            1543214428136=====#taskCount(1)#id(0)#countDown(8),
+            1543214428136=====#taskCount(1)#id(0)#countDown(7),
+            1543214428136=====#taskCount(1)#id(0)#countDown(6),
+            1543214428136=====#taskCount(1)#id(0)#countDown(5),
+            1543214428136=====#taskCount(1)#id(0)#countDown(4),
+            1543214428137=====#taskCount(1)#id(0)#countDown(3),
+            1543214428137=====#taskCount(1)#id(0)#countDown(2),
+            1543214428137=====#taskCount(1)#id(0)#countDown(1),
+            1543214428137=====#taskCount(1)#id(0)#countDown(LiftOff),
          */
     }
 
