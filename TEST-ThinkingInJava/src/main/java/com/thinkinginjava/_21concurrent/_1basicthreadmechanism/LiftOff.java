@@ -38,6 +38,11 @@ public class LiftOff implements Runnable {
     public void run() {
         while (countDown-- > 0){
             System.out.println(status());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             // 线程让步,详见知识梳理第一点
             Thread.yield();
         }

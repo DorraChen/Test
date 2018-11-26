@@ -71,4 +71,7 @@ Time: 1543215567861, Thread ID: 15=====#taskCount(5)#id(4)#countDown(2)
 Time: 1543215567861, Thread ID: 15=====#taskCount(5)#id(4)#countDown(1)
 Time: 1543215567861, Thread ID: 15=====#taskCount(5)#id(4)#countDown(LiftOff)
  */
+/**
+ * FixedThreadPool如果用了Thread.sleep(),会抛出异常=====java.lang.InterruptedException: sleep interrupted,所以不可用Thread.sleep()来打断线程
+ */
 }

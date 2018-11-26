@@ -80,3 +80,16 @@
 
     (4)ScheduleThreadPool:
 
+
+    FixedThreadPool如果用了Thread.sleep(),会抛出异常
+    =====java.lang.InterruptedException: sleep interrupted,所以不可用Thread.sleep()来打断线程
+
+
+6、System.currentTimeMillis():获取系统当前时间
+
+7、Thread.currentThread().getId():
+    Thread.currentThread()是Thread的一个静态方法，用来获取当前线程对象的一个引用。
+    Thread.currentThread().getName():当前线程名字;
+    Thread.currentThread().getPriority():当前线程的优先级别;
+    Thread.currentThread().getId():当前线程的优先级别;
+
