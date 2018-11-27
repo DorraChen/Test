@@ -79,6 +79,8 @@
        (按先入先出的顺序执行任务。不处理并发的操作，不会被回收，效率慢。)
 
     (4)ScheduleThreadPool:
+       有延迟执行和周期重复执行。
+       它的核心线程池固定，非核心线程的数量没有限制，但闲置时会立即被收回。
 
 
     FixedThreadPool如果用了Thread.sleep(),会抛出异常
@@ -92,4 +94,12 @@
     Thread.currentThread().getName():当前线程名字;
     Thread.currentThread().getPriority():当前线程的优先级别;
     Thread.currentThread().getId():当前线程的优先级别;
+
+    ID一样说明是同一个线程。
+
+8、Java Future类:
+    Runnable是执行工作的独立任务，但是无返回值。
+    Callable有返回值。
+    Callable是一种具有类型参数的泛型，它的类型参数表示的是从方法call()中返回的值，而Runnable是run()。
+    不过，要使用ExecutorService.submit()方法调用。
 

@@ -31,6 +31,7 @@ public class LiftOff implements Runnable {
      * @return
      */
     public String status() {
+        // ID一样说明是同一个线程
         return "Time: " + System.currentTimeMillis() + ", Thread ID: " + Thread.currentThread().getId() + "=====#taskCount("+ taskCount +")#id(" + id + ")#countDown(" + (countDown > 0 ? countDown : "LiftOff") + ") ";
     }
 
