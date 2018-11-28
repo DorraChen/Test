@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism;
+package com.thinkinginjava._21concurrent._1basicthreadmechanism.daemon;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +17,6 @@ public class SimpleDaemons implements Runnable {
             while (true){
                 TimeUnit.MILLISECONDS.sleep(1000);
                 System.out.println("Time: "+ System.currentTimeMillis() + ", " + Thread.currentThread() + "=====" + this);
-
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
