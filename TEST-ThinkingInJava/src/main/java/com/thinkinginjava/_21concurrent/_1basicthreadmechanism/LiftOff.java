@@ -40,7 +40,10 @@ public class LiftOff implements Runnable {
         while (countDown-- > 0){
             System.out.println(status());
             try {
+                // Old-style:
                 Thread.sleep(1000);
+                /*// Java SE5/6-style:
+                 TimeUnit.MILLISECONDS.sleep(1000);*/
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -48,4 +51,7 @@ public class LiftOff implements Runnable {
             Thread.yield();
         }
     }
+    /**
+     * 在此捕获异常,是因为异常不能跨越线程传播回main()
+     */
 }

@@ -102,4 +102,22 @@
     Callable有返回值。
     Callable是一种具有类型参数的泛型，它的类型参数表示的是从方法call()中返回的值，而Runnable是run()。
     不过，要使用ExecutorService.submit()方法调用。
+    submit()方法会产生Future对象，它用Callable返回结果的特定类型进行了参数化。
+    可以用isDone()方法来查询Future是否已经完成。
 
+9、线程中的异常:
+    在线程中要捕获异常，是因为异常不能跨越线程传播回main()。所以必须在本地处理所有在任务内部产生的异常。
+
+10、
+    // Old-style:
+    Thread.sleep(1000);
+    /*// Java SE5/6-style:
+      TimeUnit.MILLISECONDS.sleep(1000);*/
+
+11、关于优先级:
+    线程的优先级将线程的重要性传递给调度器。调度器倾向于让优先级高的线程先执行，但是并不是说优先级低的线程将得不到执行，
+    只是优先级低的线程执行的频率较低。
+
+12、
+
+13、
