@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism;
+package com.day21concurrent.chapter1.basicthreadmechanism;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -41,10 +41,11 @@ public class SimplePriorities implements Runnable {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 5; i++) {
             exec.execute(new SimplePriorities(Thread.MIN_PRIORITY));
+        }
         exec.execute(new SimplePriorities(Thread.MAX_PRIORITY));
         exec.shutdown();
     }

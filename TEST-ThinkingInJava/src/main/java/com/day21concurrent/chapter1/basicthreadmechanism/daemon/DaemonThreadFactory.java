@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism.daemon;
+package com.day21concurrent.chapter1.basicthreadmechanism.daemon;
 
 import java.util.concurrent.ThreadFactory;
 

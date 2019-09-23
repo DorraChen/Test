@@ -1,11 +1,11 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism;
+package com.day21concurrent.chapter1.basicthreadmechanism;
 
 /**
  * @author clz
  * @date 2018/11/23 10:26
  */
 public class MainThread {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         LiftOff liftOff = new LiftOff();
         liftOff.run();
         System.out.println("Time: " + System.currentTimeMillis() + ", Thread ID: " + Thread.currentThread().getId() + "=====Waiting for LiftOff!");

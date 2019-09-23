@@ -1,11 +1,11 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism;
+package com.day21concurrent.chapter1.basicthreadmechanism;
 
 /**
  * @author clz
  * @date 2018/11/23 14:10
  */
 public class MoreBasicThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         for (int i = 0; i < 5; i++){
             new Thread(new LiftOff()).start();
         }

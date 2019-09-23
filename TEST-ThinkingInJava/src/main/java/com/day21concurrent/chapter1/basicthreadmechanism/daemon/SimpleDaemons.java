@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism.daemon;
+package com.day21concurrent.chapter1.basicthreadmechanism.daemon;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +23,7 @@ public class SimpleDaemons implements Runnable {
         }
     }
 
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 10; i++){
             Thread daemon = new Thread(new SimpleDaemons());
             // 调用setDaemon()方法将其设置为后台线程
@@ -37,16 +37,16 @@ public class SimpleDaemons implements Runnable {
     // 执行结果:(不唯一)
 /*
 Time: 1543387745795, All daemons started!
-Time: 1543387746796, Thread[Thread-1,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@95458f7
-Time: 1543387746796, Thread[Thread-0,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@383a0ba
-Time: 1543387746800, Thread[Thread-9,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@29580e2d
-Time: 1543387746801, Thread[Thread-8,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@6d5af378
-Time: 1543387746801, Thread[Thread-7,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@dc7a4fc
-Time: 1543387746801, Thread[Thread-6,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@2770f418
-Time: 1543387746801, Thread[Thread-5,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@48369750
-Time: 1543387746801, Thread[Thread-4,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@2858c11c
-Time: 1543387746801, Thread[Thread-3,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@d9d8ad0
-Time: 1543387746802, Thread[Thread-2,5,main]=====com.thinkinginjava._21concurrent._1basicthreadmechanism.SimpleDaemons@6d9da26a
+Time: 1543387746796, Thread[Thread-1,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@95458f7
+Time: 1543387746796, Thread[Thread-0,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@383a0ba
+Time: 1543387746800, Thread[Thread-9,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@29580e2d
+Time: 1543387746801, Thread[Thread-8,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@6d5af378
+Time: 1543387746801, Thread[Thread-7,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@dc7a4fc
+Time: 1543387746801, Thread[Thread-6,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@2770f418
+Time: 1543387746801, Thread[Thread-5,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@48369750
+Time: 1543387746801, Thread[Thread-4,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@2858c11c
+Time: 1543387746801, Thread[Thread-3,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@d9d8ad0
+Time: 1543387746802, Thread[Thread-2,5,main]=====com.day21concurrent.chapter1.SimpleDaemons@6d9da26a
  */
 /**
  * 分析:一旦main()完成工作,就没有什么可以阻止程序终止,此时除了后台程序就无线程运行.

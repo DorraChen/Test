@@ -1,6 +1,6 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism.executor;
+package com.day21concurrent.chapter1.basicthreadmechanism.executor;
 
-import com.thinkinginjava._21concurrent._1basicthreadmechanism.LiftOff;
+import com.day21concurrent.chapter1.basicthreadmechanism.LiftOff;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  * @date 2018/11/23 14:53
  */
 public class CachedThreadPool {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
         /* 线程池不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式，
            这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。*/

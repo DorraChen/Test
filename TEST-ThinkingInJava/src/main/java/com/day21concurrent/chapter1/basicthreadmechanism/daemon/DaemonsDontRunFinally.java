@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism.daemon;
+package com.day21concurrent.chapter1.basicthreadmechanism.daemon;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2018/11/28 16:08
  */
 public class DaemonsDontRunFinally {
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(new ADaemon());
         t.setDaemon(true);
         t.start();

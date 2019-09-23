@@ -1,4 +1,4 @@
-package com.thinkinginjava._21concurrent._1basicthreadmechanism;
+package com.day21concurrent.chapter1.basicthreadmechanism;
 
 import java.util.ArrayList;
 import java.util.concurrent.*;
@@ -26,7 +26,7 @@ public class TaskWithResult implements Callable<String> {
 }
 
 class CallableDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
         ArrayList<Future<String>> results = new ArrayList<Future<String>>();
         for (int i = 0; i < 10; i++){
