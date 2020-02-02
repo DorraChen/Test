@@ -3,7 +3,7 @@ package com.chapter0002;
 /**
  * @author clz
  * @date 2020/2/1 20:59
- * @description
+ * @description 多线程创建方式:实现Runnable接口
  */
 class ThreadDemo02 implements Runnable {
     public void run() {

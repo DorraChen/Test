@@ -3,7 +3,7 @@ package com.chapter0002;
 /**
  * @author clz
  * @date 2020/2/2 11:29
- * @description
+ * @description 多线程创建方式:使用匿名内部类方式
  */
 public class Test003 {
     public static void main(String[] args) {
